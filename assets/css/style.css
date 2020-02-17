@@ -9,6 +9,9 @@ button,input{
     padding: 0;
     box-sizing: border-box;
 }
+.button:focus, button:active {
+  outline: none;
+}
 body{
     font-family: 'Roboto', sans-serif ;
     text-rendering: optimizeLegibility !important;           /**melhorar a performance das fonts**/
@@ -215,26 +218,53 @@ section.culture{
   color: #f2e9e4;
 }
 .contact-info{
-  display: flex;  
+  display: flex; 
+  justify-content: space-between; 
 }
 .contact-info form{
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap; 
-
-  width: 744px;
-  height: 287px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 6vh 6vh 16vh 6vh;
+  
 }
 
-.contact-info form input{
+.contact-info form input:nth-child(-n+4){
   width: 256px;
   height: 46px;
   background: rgba(217, 177, 199, 0.1);
   border: 1px solid #30264f;
   box-sizing: border-box;
-  border-radius: 5%;
+  
+  padding-left: 16px;
 }
+.contact-info form input.grid-1, .grid-2{
+  width: auto;
+}
+.contact-info form input.grid-3{
+  grid-column-start: 1;
+  grid-column-end: 4;
 
+  width: auto;
+}
+.contact-info form input.grid-4{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  width: auto;
+  height: auto;
+}
+.contact-info form button.grid-5{
+  grid-column-start:1;
+  grid-column-end: 4;
+  width: auto;
+
+  background-color: #F2C98C;
+  font-weight: bold;
+  
+  margin-top: 4px;
+}
+footer{
+  margin-top: 64px;
+}
 footer.foot{  
   display: flex;
   align-items: center;

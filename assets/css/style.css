@@ -9,6 +9,9 @@ button,input{
     padding: 0;
     box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 .button:focus, button:active {
   outline: none;
 }
@@ -16,6 +19,9 @@ body{
     font-family: 'Roboto', sans-serif ;
     text-rendering: optimizeLegibility !important;           /**melhorar a performance das fonts**/
     -webkit-font-feature-settings: antialiased !important;
+}
+a{
+  text-decoration: none;
 }
 .content{
     max-width: 1120px;
@@ -50,6 +56,11 @@ nav.header-nav ul li{
   font-weight: bold;
   font-size: 24px;
 }
+nav.header-nav ul li:hover{
+  
+  background-color:#93406d;
+  border-radius: 5%;
+}
 .img-logo{
   display: flex;    
   justify-content: center;
@@ -75,6 +86,7 @@ main{
   padding-top: 16px;
   border-radius: 8%;
 }
+
 
 /*Estilizando as regras*/
 .rules{  
